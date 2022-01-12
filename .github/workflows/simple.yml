@@ -12,3 +12,16 @@ jobs:
         run: |
           node -v
           npm -v
+      - name: Python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+  run-powerShell-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Get bash current location
+        run: cwd
+        shell: bash
