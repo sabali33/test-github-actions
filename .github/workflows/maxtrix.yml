@@ -10,7 +10,7 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
         exclude:
           - os: windows-latest
-          - node_version: 10
+            node_version: 10
     steps:
       - name: Node node-version
         run: echo ${{matrix.os}} ${{matrix.node_version}}
