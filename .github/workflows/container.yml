@@ -6,7 +6,7 @@ jobs:
   check-version:
     runs-on: ubuntu-latest
     container:
-      image: 14-slim
+      image: node:14-slim
     steps:
       - name: Check node version in container
         run: |
