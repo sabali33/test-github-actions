@@ -12,3 +12,8 @@ jobs:
         run: |
           node -v
           cat /etc/os-release
+      - name: Check step not version
+        uses: docker://17-stretch
+        with:
+          entrypoint: /usr/local/bin/node
+          args: -v
