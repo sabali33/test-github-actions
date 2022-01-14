@@ -1,0 +1,14 @@
+name: Docker Container
+
+on: [push]
+
+jobs:
+  check-version:
+    runs-on: ubuntu-latest
+    container:
+      image: 14-slim
+    steps:
+      - name: Check node version in container
+        run: |
+          node -v
+          cat /etc/os-release
